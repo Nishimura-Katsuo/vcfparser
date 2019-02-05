@@ -46,14 +46,14 @@ const VCF = {
 				break;
 			default:
 				if (vcard && tag) {
+					entry = {};
+
 					if (group) {
 						vcard.groups = vcard.groups ? vcard.groups : {};
 						vcard.groups[group] = vcard.groups[group] ? vcard.groups[group] : [];
-						entry = {};
 						vcard.groups[group].push(entry);
 					} else {
 						vcard.entries = vcard.entries ? vcard.entries : [];
-						entry = {};
 						vcard.entries.push(entry);
 					}
 
