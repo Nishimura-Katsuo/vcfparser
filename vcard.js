@@ -8,7 +8,45 @@ function strcut (str, char) {
 }
 
 const VCF = {
-	strcut: strcut,
+	properties: {
+		BEGIN: {required: true},
+		END: {required: true},
+		SOURCE: {},
+		KIND: {},
+		XML: {},
+		FN: {required: true},
+		N: {},
+		NICKNAME: {},
+		PHOTO: {},
+		BDAY: {},
+		ANNIVERSARY: {},
+		GENDER: {},
+		ADR: {},
+		TEL: {},
+		EMAIL: {},
+		IMPP: {},
+		LANG: {},
+		TZ: {},
+		GEO: {},
+		TITLE: {},
+		ROLE: {},
+		LOGO: {},
+		ORG: {},
+		MEMBER: {},
+		RELATED: {},
+		CATEGORIES: {},
+		NOTE: {},
+		PRODID: {},
+		REV: {},
+		SOUND: {},
+		UID: {},
+		CLIENTPIDMAP: {},
+		VERSION: {required: true},
+		KEY: {},
+		FBURL: {},
+		CALADRURI: {},
+		CALURI: {}
+	},
 	parse: function (text) {
 		let ret = [], vcard;
 		text.replace(/[\r\n]+[ \t]+/g, '').split(/[\r\n]+/).forEach(line => {
